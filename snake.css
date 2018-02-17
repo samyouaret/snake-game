@@ -1,0 +1,64 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+#wrapper {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-90deg, #16ceb9, #3ff1ad,#3bcc95);
+    padding-top: 7%;
+    padding-bottom: 10%;
+    text-align: center;
+}
+#container {
+    background-color: #949494;
+    width: 600px;
+    height: 480px;
+    margin: 0;
+    border: 10px solid #407375;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 9px;
+}
+.unit {
+    width: 40px;
+    height: 40px;
+    background: #e3e3e3;
+    display: inline-block;
+    float: left;
+    border-radius: 35%;
+    text-align: center;
+    font-size: 12px;
+    transition: 0.1s ease;
+}
+#gameOver, #startGame {
+    width: 550px;
+    height: 475px;
+    background: linear-gradient(-90deg, #e8f18e, #26fbaa,#e8f18e);
+    border: 4px solid #407375;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    border-radius: 5%;
+}
+#gameOver {
+    display: none;
+}
+button {
+    border: none;
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #2e696b;
+    outline: 0;
+    cursor: pointer;
+    font-size: 30px;
+}
+h2 {
+    color: #d64619;
+    font-size: 50px;
+    text-transform: none;
+}
