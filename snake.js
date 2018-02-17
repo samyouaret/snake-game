@@ -11,6 +11,7 @@ function snake(){
     this.maxTop = 179;
     this.unit = 15;
     this.node = -1;
+    this.speed = 300;
     this.container = document.getElementById("container");
     this.createContainer = function()
     {
@@ -144,34 +145,33 @@ function snake(){
 function restart(){
   location.reload();
 }
-var s = new snake();
+var snakeGame = new snake();
 /** create game table(matrix)*/
-s.createContainer();
+snakeGame.createContainer();
 /* fill matrix elements*/
-s.fillNodes();
-
+snakeGame.fillNodes();
+var gameOver =document.getElementById("gameOver");
 /**play function **/
 function playSnake() {
   var startGame =document.getElementById("startGame");
   startGame.style = "display:none";
-  var timer = setInterval(play,300);
-  function play(){
+  var timer = setInterval(function(){
     /* create random node in the matrix and fill it
     ** move than eat to avoid bugs
     */
-    s.createNode();
+    snakeGame.createNode();
     /// if the snake is not alife clear the timer
     // show the game ovder mesg
-    if(!s.move(s.sDir)){
+    if(!snakeGame.move(snakeGame.sDir)){
       clearInterval(timer);
       gameOver.style = "display:block";
       return false;
     }
-    s.eat();
-  }
+    snakeGame.eat();
+  },snakeGame.speed);
   document.onkeyup = function(evt) {
       evt = evt || window.event;
-      var newDir = s.Dir;
+      var newDir = snakeGame.Dir;
   switch (evt.keyCode) {
     case 38:
         newDir = 0;
@@ -186,7 +186,6 @@ function playSnake() {
         newDir = 3;
     break;
   }
-  s.updateDir(newDir);
+  snakeGame.updateDir(newDir);
   }
-  var gameOver =document.getElementById("gameOver");
 }
