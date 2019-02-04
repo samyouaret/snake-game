@@ -1,8 +1,8 @@
 # snake game
 <img src="snake.png"/>
-just a simple snake game only for __demonstration purposes__.
+just a simple snake game only for __*demonstration purposes*__.
 
-playing instructions
+### playing instructions
 
 --------------------
 
