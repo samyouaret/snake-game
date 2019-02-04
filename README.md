@@ -1,10 +1,8 @@
 # snake game
 <img src="snake.png"/>
-just a simple snake game only for ** demonstration purposes **.
+just a simple snake game only for demonstration purposes.
 
 ### playing instructions
-
---------------------
 
 1. move up by pressing the up key
 3. move down by pressing the down key
